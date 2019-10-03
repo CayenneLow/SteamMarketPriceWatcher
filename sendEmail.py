@@ -14,9 +14,10 @@ sns = boto3.client(
 # Publish a simple message to the specified SNS topic
 def sendEmail(prices):
     composeMessage = ""
-    for name, price in prices.iteritems():
-        stringBuffer = "{} is at {} (median price)\n".format(name, price)
-        composeMessage += stringBuffer
+    for item in prices:
+        for name, price in item.iteritems():
+            stringBuffer = "{} is:          RM{} (median price)\n".format(name, price)
+            composeMessage += stringBuffer
     response = sns.publish(
         TopicArn='arn:aws:sns:ap-southeast-2:828914858024:SteamMarketMonitor',    
         Message=composeMessage
