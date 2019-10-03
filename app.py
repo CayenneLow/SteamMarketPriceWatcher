@@ -1,5 +1,6 @@
 import requests
 import json
+from sendEmail import sendEmail
 
 f = open("watchlist.json", "r");
 items = f.read();
@@ -11,3 +12,4 @@ for item in jsonList:
     medianPrice = dataInJson["median_price"][2:]
     currentPrices.append({item["name"]:medianPrice})
 print(currentPrices)
+sendEmail(currentPrices)
