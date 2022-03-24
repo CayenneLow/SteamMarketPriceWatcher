@@ -1,7 +1,7 @@
 import os
 import requests
 
-url = "http://127.0.0.1:80/message"
+url = "http://127.0.0.1:1338/message"
 token = os.getenv('SteamMarketPriceWatcherToken')
 
 # Publish a simple message to the specified SNS topic
