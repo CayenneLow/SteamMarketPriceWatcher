@@ -1,0 +1,1 @@
+0 9 */2 * * /usr/bin/python3 /home/pi/SteamMarketPriceWatcher/app.py >> /home/pi/SteamMarketPriceWatcher/log.log 2>&1
