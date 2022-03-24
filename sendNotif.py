@@ -21,6 +21,5 @@ def sendNotif(prices):
             "token": token
         }
     ) 
-    print(r)
 
 
